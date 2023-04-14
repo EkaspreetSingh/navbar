@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        #navbar-elements {
+            font-family:cursive;
+            border-radius: 10px;
+            margin: auto;
+            padding: 2px;
+            background: rgb(132, 171, 184);
+            color: rgb(63, 63, 63);
+            padding: 5px;
+            font-size: medium;
+            box-shadow: 0px 0px 0px rgb(41, 41, 41);
+        }
+        #navbar-elements:hover:not(.active)  {
+            animation-name: animate;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            cursor: pointer;
+        }
+        @keyframes animate {
+            from {
+                padding: 5px;
+                font-size: medium;
+                box-shadow: 0px 0px 0px rgb(41, 41, 41);
+            }
+            to {
+                padding: 7px;
+                font-size: large;
+                box-shadow: 15px 15px 20px rgb(104, 104, 104);
+            }
+        }
+        #navbar {
+            display: flex;
+            /* border: 1px solid black; */
+            width: 100%;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: #f3f3f3;
+
+        }
+        #navbar ul{
+            /* overflow: hidden; */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #navbar li {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            /* border: 1px solid #ddd; */
+            width: 80px;
+            height: 60px;
+            float: left;
+        }
+        #navbar li a{
+            text-decoration: none;
+            background-color: #ddd;
+            
+        }
+        #navbar li a.active {
+            border: 3px solid #ddd;
+            background-color: #f3f3f3;
+        }
+        #menu {
+            margin-left: 5px;
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            #menu {
+                display: block;
+            }
+            #navbar {
+                width:50px;
+            }
+            #navbar:hover {
+                width: 100%;
+            }
+            #navbar:hover ul {
+                display: block;
+            }
+            #navbar:hover #menu {
+                position: fixed;
+                animation-name: roll;
+                animation-duration: 0.3s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: 1;
+                /* display: none; */
+            }
+            #navbar  ul{
+                display: none;
+            }
+            #navbar ul li {
+                float: none; width:100vw;
+            }
+        }
+        @keyframes roll {
+            from {
+                /* transform: rotate(180deg); */
+            }
+            to {
+                transform: rotate(180deg);
+            }
+        }
+        </style>
+</head>
+<body>
+    <h1 style="background: #f3f3f3; margin: 0; padding: 30px; text-align: center; border-bottom: 1px solid rgb(221, 221, 221);">DEMO WEBSITE FOR NAVBAR</h1>
+    <div id="navbar">  <!-- class="container"> -->
+        <div id="menu"> <img src="menu.png" alt="" srcset="" width="40px"> </div>
+        <ul>
+            <li><a href="#home" id="navbar-elements" class="active">Home</a></li>
+            <li><a href="#news" id="navbar-elements">News</a></li>
+            <li><a href="#contact" id="navbar-elements">Contact</a></li>
+            <li><a href="#about" id="navbar-elements">About</a></li>
+        </ul>
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo voluptatum mollitia aliquam quia iste veritatis laudantium excepturi iusto commodi doloribus consequatur obcaecati ad fugit adipisci labore rem, harum cum architecto. Dolorum odit officia voluptatibus minus iste, exercitationem asperiores, natus, debitis unde deserunt itaque facere quo! Veniam assumenda voluptatibus inventore magni delectus. Perferendis, velit nihil praesentium excepturi pariatur quidem dolorum a, similique placeat magni, perspiciatis natus qui repudiandae ducimus molestiae doloremque facilis cupiditate accusantium aperiam ipsa. Natus odit itaque, temporibus rerum explicabo nisi facilis nulla nesciunt. Quia quas labore maxime quis eaque excepturi repellendus ratione! Voluptas distinctio maxime rem harum officiis eaque natus adipisci veritatis error sed non veniam, odio accusamus unde dolores animi aut nam quasi perspiciatis minima tenetur assumenda? Unde, pariatur ratione asperiores a atque amet consequuntur minus alias aspernatur explicabo. Velit animi molestiae earum, perferendis nostrum, recusandae dolorem porro repellat voluptatem exercitationem, laborum vitae mollitia architecto sed. Saepe dolores, molestias culpa earum a aliquid quia nisi rerum tempora id voluptate dolor veritatis corporis nulla itaque quod assumenda accusamus, nam totam ratione eligendi similique sequi dolorum. Quo aperiam neque dolorem consequatur, cum illo quia earum voluptas, quisquam laborum blanditiis mollitia, hic pariatur ad incidunt vero distinctio doloremque aliquam illum veritatis accusamus? Modi odio fuga rem quaerat a mollitia eius repellat eos nisi officia, iusto voluptatum earum! Quidem modi quod doloribus dolore ad magni mollitia perferendis reprehenderit fuga, officia aliquam maiores architecto quam eum totam dolor fugiat, harum autem repellendus sint voluptatum accusantium pariatur quibusdam! Quam dicta laboriosam ipsum iure? Delectus, accusamus? Est veniam accusamus nesciunt cupiditate incidunt fuga ipsum hic atque voluptatem reiciendis consequuntur magnam error perspiciatis inventore, aperiam cumque reprehenderit labore placeat modi praesentium enim? Accusantium eum ipsum natus illo repellendus sequi molestias quod laborum sint. Atque vero sapiente a ducimus quas unde? Quo, quidem quibusdam aut minus eaque enim at recusandae dolorum eligendi, assumenda vel incidunt explicabo. Eius assumenda tenetur ducimus cupiditate, dolor voluptates minima impedit aut odit inventore. Nulla beatae, facilis voluptatem nobis quaerat sed id nostrum ad tenetur aperiam debitis enim? Esse culpa doloremque ea itaque suscipit quasi, aliquid voluptatum quia? Consequuntur magni tempore quibusdam fugiat porro nulla beatae totam. Velit error eius ea ab quaerat, animi alias, iusto, numquam mollitia minima odio totam ipsum molestias repellendus nihil veritatis? Modi assumenda facilis quas. Sed, similique dolorum vel ratione debitis odit, delectus commodi rem, hic doloribus repudiandae nam quis quidem. Error veniam optio similique eligendi aspernatur ratione ullam, rem velit, minus, itaque natus! Magni architecto temporibus consequatur minus at maxime ex quasi tenetur explicabo adipisci doloribus iusto similique nulla incidunt, qui impedit porro earum, id ipsum animi molestiae aspernatur quam accusamus. Eligendi nulla maxime ullam a ab libero vitae aliquam magni quam praesentium, consequatur, voluptatum at natus neque. Pariatur, natus dignissimos. Laboriosam eaque aperiam ipsum modi assumenda beatae sed magni vero fuga possimus? Alias natus repellat molestiae odio ipsum deserunt dicta quia adipisci unde necessitatibus! Vero dolorem id, officiis culpa error minus dolores aperiam velit debitis maxime quibusdam voluptatibus a impedit perferendis inventore natus molestiae? Numquam consequatur, repudiandae dolore molestias porro inventore debitis error sapiente, minima tempore aliquam labore animi laudantium culpa eius. Non fuga itaque esse reiciendis? Asperiores molestias nam velit neque est a quasi nesciunt doloremque perspiciatis, necessitatibus fugiat ipsa laborum tempora. Perferendis temporibus, repudiandae itaque officia minima ut! Numquam consequuntur neque voluptate incidunt possimus dolores asperiores nisi aut. Cupiditate aliquid quae exercitationem! Consequuntur sint fuga consequatur iusto recusandae, amet enim. Molestias voluptatibus corrupti nihil vel a repellendus assumenda, eum numquam soluta laborum culpa voluptatem beatae itaque officia at veritatis? A modi laboriosam animi ratione quas sapiente, id laborum nemo, magni non exercitationem, deserunt cumque possimus dignissimos aliquam. Praesentium repellendus quae ipsam officia! Optio accusantium cum illo maiores nemo nesciunt, fuga vitae praesentium voluptatibus reiciendis nulla alias! Odio rem magni eligendi, ab accusantium veniam omnis repellendus quas maxime a quisquam repudiandae. Velit ab impedit culpa deleniti vel dolorum quae soluta exercitationem doloremque non! Cumque debitis nam rem, consequatur provident corrupti velit ipsa ut, inventore molestiae quasi autem soluta? Debitis vel iure possimus harum impedit aperiam error dignissimos, repellendus minima deserunt. Dignissimos sint ea commodi temporibus, id corporis mollitia recusandae! Cumque, repellat quaerat, nulla dicta vero expedita quae quod quo incidunt iure voluptatum optio!
+</body>
+</html>
